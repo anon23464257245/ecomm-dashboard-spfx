@@ -1,7 +1,8 @@
 declare interface IEcommAnalyticsWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
-  DescriptionFieldLabel: string;
+  ApiBaseUrlFieldLabel: string;
+  ApiBaseUrlFieldDescription: string;
   AppLocalEnvironmentSharePoint: string;
   AppLocalEnvironmentTeams: string;
   AppLocalEnvironmentOffice: string;
