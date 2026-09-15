@@ -1,0 +1,10 @@
+/*
+  SPFx entry CSS — Tailwind without preflight so SharePoint chrome is preserved.
+  Prebuild with: npm run spfx:css
+  Then import the generated styles/app.css from the web part (not this source file).
+*/
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "./app-theme.css";

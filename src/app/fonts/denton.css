@@ -1,0 +1,60 @@
+/*
+  Denton heading/stat serif.
+  Preview files cover A–Z, a–z, 0–9, space, comma, period, and hyphen.
+  Missing glyphs ($, %, :, etc.) fall back to Georgia.
+*/
+@font-face {
+  font-family: "Denton";
+  src: url("../assets/fonts/denton/Denton-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Denton";
+  src: url("../assets/fonts/denton/Denton-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Denton";
+  src: url("../assets/fonts/denton/Denton-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Denton";
+  src: url("../assets/fonts/denton/Denton-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Denton";
+  src: url("../assets/fonts/denton/Denton-Bold.woff2") format("woff2");
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Denton";
+  src: url("../assets/fonts/denton/Denton-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Denton";
+  src: url("../assets/fonts/denton/Denton-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

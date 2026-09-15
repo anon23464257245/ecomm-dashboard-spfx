@@ -1,0 +1,392 @@
+@custom-variant dark (&:is(.dark *));
+
+/*
+  Brand colors from Oldcastle APG guidelines.
+  Fonts are imported from main.tsx (Vite resolves packages there reliably;
+  Tailwind’s CSS pipeline was failing on @fontsource paths).
+  Body: Geist Variable. Headings/stats: Denton.
+*/
+
+@theme inline {
+  --font-heading: "Denton", Georgia, serif;
+  --font-sans: "Geist Variable", "Geist", ui-sans-serif, system-ui, sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-other: var(--chart-other);
+  --color-chart-12: var(--chart-12);
+  --color-chart-11: var(--chart-11);
+  --color-chart-10: var(--chart-10);
+  --color-chart-9: var(--chart-9);
+  --color-chart-8: var(--chart-8);
+  --color-chart-7: var(--chart-7);
+  --color-chart-6: var(--chart-6);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+  --color-chart-scale-pattern-color: var(--chart-scale-pattern-color);
+  --color-chart-scale-05: var(--chart-scale-05);
+  --color-chart-scale-04: var(--chart-scale-04);
+  --color-chart-scale-03: var(--chart-scale-03);
+  --color-chart-scale-02: var(--chart-scale-02);
+  --color-chart-scale-01: var(--chart-scale-01);
+  --color-chart-label: var(--chart-label);
+  --color-chart-marker-foreground: var(--chart-marker-foreground);
+  --color-chart-marker-border: var(--chart-marker-border);
+  --color-chart-marker-background: var(--chart-marker-background);
+  --color-chart-tooltip-muted: var(--chart-tooltip-muted);
+  --color-chart-tooltip-foreground: var(--chart-tooltip-foreground);
+  --color-chart-tooltip-background: var(--chart-tooltip-background);
+  --chart-brush-border: var(--chart-brush-border);
+  --color-chart-grid: var(--chart-grid);
+  --color-chart-crosshair: var(--chart-crosshair);
+  --chart-line-secondary: var(--chart-line-secondary);
+  --chart-line-primary: var(--chart-line-primary);
+  --color-chart-foreground-muted: var(--chart-foreground-muted);
+  --color-chart-foreground: var(--chart-foreground);
+  --color-chart-background: var(--chart-background);
+  --color-brand-green: var(--brand-green);
+  --color-brand-bright: var(--brand-bright);
+  --color-brand-midtone: var(--brand-midtone);
+  --color-brand-sage: var(--brand-sage);
+  --color-brand-sky: var(--brand-sky);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-orange-mid: var(--brand-orange-mid);
+}
+
+:root {
+  /* Official palette */
+  --brand-green: #00583d;
+  --brand-bright: #bacc28;
+  --brand-midtone: #719d3d;
+  --brand-sage: #bbc5a1;
+  --brand-sky: #a1cfe7;
+  --brand-orange: #f26322;
+  --brand-orange-mid: #f99d1c;
+
+  /* 20% tint backgrounds from guidelines */
+  --brand-green-20: #b5d0c7;
+  --brand-bright-20: #edf0d1;
+  --brand-midtone-20: #dae3cd;
+  --brand-sage-20: #eceee5;
+  --brand-sky-20: #e9f3f8;
+  --brand-orange-20: #fedcc6;
+  --brand-orange-mid-20: #ffe8cc;
+
+  --background: var(--brand-sage-20);
+  --foreground: #0f1f18;
+  --card: #ffffff;
+  --card-foreground: #0f1f18;
+  --popover: #ffffff;
+  --popover-foreground: #0f1f18;
+  --primary: var(--brand-green);
+  --primary-foreground: #f7faf8;
+  --secondary: var(--brand-midtone-20);
+  --secondary-foreground: var(--brand-green);
+  --muted: var(--brand-sage-20);
+  --muted-foreground: #3d5348;
+  --accent: var(--brand-bright-20);
+  --accent-foreground: var(--brand-green);
+  --destructive: var(--brand-orange);
+  --border: #c9d4c4;
+  --input: #c9d4c4;
+  --ring: var(--brand-midtone);
+  --chart-1: var(--brand-bright);
+  --chart-2: var(--brand-midtone);
+  --chart-3: var(--brand-green);
+  --chart-4: var(--brand-sage);
+  --chart-5: var(--brand-sky);
+  --chart-6: var(--brand-orange);
+  --chart-7: var(--brand-orange-mid);
+  --chart-8: color-mix(in oklch, var(--brand-green) 58%, var(--brand-sky));
+  --chart-9: color-mix(in oklch, var(--brand-bright) 52%, var(--brand-green));
+  --chart-10: color-mix(in oklch, var(--brand-orange) 48%, var(--brand-sage));
+  --chart-11: color-mix(in oklch, var(--brand-sky) 62%, var(--brand-midtone));
+  --chart-12: color-mix(in oklch, var(--brand-midtone) 58%, var(--brand-orange-mid));
+  --chart-other: color-mix(in oklch, var(--brand-sage) 62%, var(--muted-foreground));
+  --radius: 0.75rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0f1f18;
+  --sidebar-primary: var(--brand-green);
+  --sidebar-primary-foreground: #f7faf8;
+  --sidebar-accent: var(--brand-midtone-20);
+  --sidebar-accent-foreground: var(--brand-green);
+  --sidebar-border: #d7e2d4;
+  --sidebar-ring: var(--brand-midtone);
+  --chart-line-primary: var(--brand-midtone);
+  --chart-line-secondary: var(--brand-green);
+  --chart-grid: #d7e2d4;
+  --chart-background: #ffffff;
+  --chart-foreground: #0f1f18;
+  --chart-foreground-muted: #3d5348;
+  --chart-crosshair: var(--brand-green);
+  --chart-brush-border: var(--chart-grid);
+  --chart-tooltip-background: rgb(15 31 24 / 0.88);
+  --chart-tooltip-foreground: #f7faf8;
+  --chart-tooltip-muted: #b5d0c7;
+  --chart-marker-background: #f7faf8;
+  --chart-marker-border: #c9d4c4;
+  --chart-marker-foreground: #0f1f18;
+  --chart-label: #3d5348;
+  /* Sequential fills for choropleths — must stay visible on card white */
+  --chart-scale-01: var(--brand-midtone-20);
+  --chart-scale-02: var(--brand-green-20);
+  --chart-scale-03: var(--brand-sage);
+  --chart-scale-04: var(--brand-midtone);
+  --chart-scale-05: var(--brand-green);
+  --chart-scale-pattern-color: var(--brand-sage-20);
+}
+
+.dark {
+  --background: #0f1f18;
+  --foreground: #f7faf8;
+  --card: #152820;
+  --card-foreground: #f7faf8;
+  --popover: #152820;
+  --popover-foreground: #f7faf8;
+  --primary: var(--brand-midtone);
+  --primary-foreground: #0f1f18;
+  --secondary: #1a3328;
+  --secondary-foreground: #f7faf8;
+  --muted: #1a3328;
+  --muted-foreground: #b5d0c7;
+  --accent: #1a3328;
+  --accent-foreground: var(--brand-bright);
+  --destructive: var(--brand-orange);
+  --border: rgb(255 255 255 / 10%);
+  --input: rgb(255 255 255 / 15%);
+  --ring: var(--brand-midtone);
+  --chart-1: var(--brand-bright);
+  --chart-2: var(--brand-midtone);
+  --chart-3: var(--brand-sage);
+  --chart-4: var(--brand-sky);
+  --chart-5: var(--brand-orange-mid);
+  --chart-6: var(--brand-orange);
+  --chart-7: var(--brand-green);
+  --chart-8: color-mix(in oklch, var(--brand-green) 70%, var(--brand-sky));
+  --chart-9: color-mix(in oklch, var(--brand-bright) 62%, var(--brand-midtone));
+  --chart-10: color-mix(in oklch, var(--brand-orange) 58%, var(--brand-sage));
+  --chart-11: color-mix(in oklch, var(--brand-sky) 70%, var(--brand-green));
+  --chart-12: color-mix(in oklch, var(--brand-midtone) 62%, var(--brand-orange-mid));
+  --chart-other: color-mix(in oklch, var(--brand-sage) 45%, var(--muted-foreground));
+  --sidebar: #0a1611;
+  --sidebar-foreground: #f7faf8;
+  --sidebar-primary: var(--brand-bright);
+  --sidebar-primary-foreground: #0f1f18;
+  --sidebar-accent: #1a3328;
+  --sidebar-accent-foreground: #f7faf8;
+  --sidebar-border: rgb(255 255 255 / 10%);
+  --sidebar-ring: var(--brand-midtone);
+  --chart-line-primary: var(--brand-bright);
+  --chart-line-secondary: var(--brand-midtone);
+  --chart-grid: #1a3328;
+  --chart-background: #0f1f18;
+  --chart-foreground: #b5d0c7;
+  --chart-crosshair: var(--brand-bright);
+  --chart-foreground-muted: #b5d0c7;
+  --chart-brush-border: var(--chart-grid);
+  --chart-marker-background: #1a3328;
+  --chart-marker-border: #3d5348;
+  --chart-marker-foreground: #f7faf8;
+  --chart-label: #b5d0c7;
+  --chart-scale-01: #152820;
+  --chart-scale-02: #1a3328;
+  --chart-scale-03: #244033;
+  --chart-scale-04: #3d5348;
+  --chart-scale-05: #719d3d;
+  --chart-scale-pattern-color: #0f1f18;
+}
+
+/*
+  Stock shadcn zinc theme for PaceUI routes only.
+  Applied via the `paceui-default` class on <html> so the template is not
+  influenced by the brand tokens, fonts, or heading styles above.
+*/
+.paceui-default {
+  --radius: 0.625rem;
+  --background: oklch(0.955 0.002 286.375);
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+  --primary: oklch(0.21 0.006 285.885);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.21 0.006 285.885);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.705 0.015 286.067);
+  /* Data colors only — keep PaceUI card/background chrome. */
+  --chart-1: var(--brand-green);
+  --chart-2: var(--brand-bright);
+  --chart-3: var(--brand-orange);
+  --chart-4: var(--brand-sky);
+  --chart-5: var(--brand-midtone);
+  --chart-6: var(--brand-sage);
+  --chart-7: var(--brand-orange-mid);
+  --chart-8: color-mix(in oklch, var(--brand-green) 45%, var(--brand-sky));
+  --chart-9: color-mix(in oklch, var(--brand-bright) 52%, var(--brand-green));
+  --chart-10: color-mix(in oklch, var(--brand-orange) 48%, var(--brand-sage));
+  --chart-11: color-mix(in oklch, var(--brand-sky) 70%, var(--brand-orange-mid));
+  --chart-12: color-mix(in oklch, var(--brand-midtone) 50%, var(--brand-sage));
+  --chart-other: color-mix(in oklch, var(--brand-sage) 58%, var(--muted-foreground));
+  --chart-line-primary: var(--brand-green);
+  --chart-line-secondary: var(--brand-orange);
+  --chart-crosshair: var(--brand-green);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-primary: oklch(0.21 0.006 285.885);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(0.705 0.015 286.067);
+  --font-sans: "Geist Variable", "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Denton", Georgia, serif;
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.paceui-default :is(a, button, summary, [role="button"], [role="tab"], [role="menuitem"], [role="option"], [role="combobox"], [data-slot="button"], [data-slot="sidebar-menu-button"], [data-slot="select-trigger"]):not(:disabled):not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
+.paceui-default :is(a, button, [role="button"]):disabled,
+.paceui-default :is(a, button, [role="button"])[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.paceui-default [data-slot="card-title"],
+.paceui-default h1,
+.paceui-default h2 {
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+}
+
+.paceui-default .font-stat {
+  font-family: var(--font-heading) !important;
+  letter-spacing: -0.02em;
+}
+
+.paceui-default.dark {
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.92 0.004 286.32);
+  --primary-foreground: oklch(0.21 0.006 285.885);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.552 0.016 285.938);
+  --chart-1: var(--brand-bright);
+  --chart-2: var(--brand-midtone);
+  --chart-3: var(--brand-orange-mid);
+  --chart-4: var(--brand-sky);
+  --chart-5: var(--brand-sage);
+  --chart-6: var(--brand-green);
+  --chart-7: var(--brand-orange);
+  --chart-8: color-mix(in oklch, var(--brand-green) 70%, var(--brand-sky));
+  --chart-9: color-mix(in oklch, var(--brand-bright) 62%, var(--brand-midtone));
+  --chart-10: color-mix(in oklch, var(--brand-orange) 58%, var(--brand-sage));
+  --chart-11: color-mix(in oklch, var(--brand-sky) 70%, var(--brand-green));
+  --chart-12: color-mix(in oklch, var(--brand-midtone) 62%, var(--brand-orange-mid));
+  --chart-other: color-mix(in oklch, var(--brand-sage) 40%, var(--muted-foreground));
+  --chart-line-primary: var(--brand-bright);
+  --chart-line-secondary: var(--brand-orange-mid);
+  --chart-crosshair: var(--brand-bright);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.552 0.016 285.938);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+  }
+  #root {
+    min-height: 100svh;
+  }
+  /* SPFx web part host — prefer this over styling SharePoint's body. */
+  .apg-analytics-root {
+    @apply bg-background text-foreground font-sans;
+    min-height: 100%;
+    box-sizing: border-box;
+  }
+  html {
+    @apply font-sans;
+  }
+  h1,
+  h2,
+  .font-heading {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Brand eyebrow: TT Commons style — uppercase + expanded tracking */
+.brand-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-midtone);
+}

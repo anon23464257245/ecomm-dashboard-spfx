@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "24.16.0",
+    "sdksVersions": {},
+    "version": "1.23.2",
+    "libraryName": "ecomm-analytics-dashboard",
+    "libraryId": "7a0f1db9-23fa-4ef8-90f7-3ba4711140ff",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "ecomm-analytics-dashboard",
+    "solutionShortDescription": "ecomm-analytics-dashboard description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

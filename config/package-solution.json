@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "ecomm-analytics-dashboard-client-side-solution",
+    "id": "7a0f1db9-23fa-4ef8-90f7-3ba4711140ff",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.23.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "ecomm-analytics-dashboard description"
+      },
+      "longDescription": {
+        "default": "ecomm-analytics-dashboard description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "ecomm-analytics-dashboard Feature",
+        "description": "The feature that activates elements of the ecomm-analytics-dashboard solution.",
+        "id": "1c8ec58b-5757-4d3e-b228-11b3740c6abd",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/ecomm-analytics-dashboard.sppkg"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "ecomm-analytics-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/ecommAnalytics/EcommAnalyticsWebPart.js",
+          "manifest": "./src/webparts/ecommAnalytics/EcommAnalyticsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "EcommAnalyticsWebPartStrings": "lib/webparts/ecommAnalytics/loc/{locale}.js"
+  }
+}
