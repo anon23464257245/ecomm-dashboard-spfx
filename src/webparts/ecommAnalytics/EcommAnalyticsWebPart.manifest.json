@@ -14,11 +14,11 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
     "group": { "default": "Advanced" },
-    "title": { "default": "ecomm-analytics" },
-    "description": { "default": "ecomm-analytics description" },
-    "officeFabricIconFontName": "Page",
+    "title": { "default": "eComm Analytics" },
+    "description": { "default": "Oldcastle APG BigCommerce analytics dashboards" },
+    "officeFabricIconFontName": "Chart",
     "properties": {
-      "description": "ecomm-analytics"
+      "apiBaseUrl": ""
     }
   }]
 }

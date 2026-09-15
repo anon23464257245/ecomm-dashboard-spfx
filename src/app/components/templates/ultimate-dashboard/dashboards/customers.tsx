@@ -156,7 +156,7 @@ function toDirectoryRows(data: CustomerDashboardData): Table4Customer[] {
         division: customer.division || "—",
         revenue: customer.periodRevenue,
         orderCount: customer.orderCount,
-        lastOrder: customer.lastOrderDate,
+        lastOrder: customer.lastOrderDate ?? null,
         share: customer.revenueShare ?? 0,
         trainingStatus: customer.trainingStatus ?? null,
     }));
@@ -169,7 +169,7 @@ function toDirectoryRows(data: CustomerDashboardData): Table4Customer[] {
             division: customer.division || "—",
             revenue: customer.periodRevenue,
             orderCount: customer.orderCount,
-            lastOrder: customer.lastOrderDate,
+            lastOrder: customer.lastOrderDate ?? null,
             share: customer.revenueShare ?? 0,
             trainingStatus: customer.trainingStatus ?? null,
         }));

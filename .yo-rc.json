@@ -1,11 +1,11 @@
 {
   "@microsoft/generator-sharepoint": {
     "useGulp": false,
-    "plusBeta": false,
+    "plusBeta": true,
     "isCreatingSolution": true,
-    "nodeVersion": "24.16.0",
+    "nodeVersion": "22.14.0",
     "sdksVersions": {},
-    "version": "1.23.2",
+    "version": "1.24.0-beta.3",
     "libraryName": "ecomm-analytics-dashboard",
     "libraryId": "7a0f1db9-23fa-4ef8-90f7-3ba4711140ff",
     "environment": "spo",

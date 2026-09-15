@@ -1,8 +1,9 @@
 define([], function() {
   return {
-    "PropertyPaneDescription": "Description",
-    "BasicGroupName": "Group Name",
-    "DescriptionFieldLabel": "Description Field",
+    "PropertyPaneDescription": "API connection for the analytics dashboards.",
+    "BasicGroupName": "API",
+    "ApiBaseUrlFieldLabel": "API base URL",
+    "ApiBaseUrlFieldDescription": "Origin only, no trailing slash (e.g. https://api.example.com). Leave empty for relative /api paths.",
     "AppLocalEnvironmentSharePoint": "The app is running on your local environment as SharePoint web part",
     "AppLocalEnvironmentTeams": "The app is running on your local environment as Microsoft Teams app",
     "AppLocalEnvironmentOffice": "The app is running on your local environment in office.com",
